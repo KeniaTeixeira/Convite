@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Para Você</title>
+
+<style>
+    html{
+        font-size: 20px;
+    }
+
+    body {
+        background-image: url('pngtree-paper-cut-flower-border-mothers-day-pink-warm-picture-image_7609953.png');
+        background-size: 100%;
+        background-position: top;
+        margin: 0;
+        padding: 0;
+        height: 80vh; 
+        overflow-y: hidden; 
+    }
+
+    main {
+        text-align: center;
+        padding: 20px;
+        position: relative; 
+        padding-top: 650px; 
+    }
+
+    .text-above-buttons {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        padding-top: 200px;
+    }
+
+    .button-container {
+
+        display: flex;
+        justify-content: center; 
+        margin-top: 20px; 
+    }
+
+    .button-container button {
+        margin: 0 10px; 
+        position: absolute; 
+    }
+
+    .sim:hover{
+        width: 70px;
+        height: 40px;
+        background-color: blueviolet;
+        border: none;
+        border-radius: 10px;
+    }
+
+    .sim {
+        font-size: 25px;
+        top: 60%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+    }
+
+    .nao {
+        font-size: 25px;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
+
+</head>
+
+<body>
+    <main>
+        <div class="text-above-buttons">
+        <h1>
+            Dia 11/05(Sábado) você tem um compromisso, você aceita ?
+        </h1>
+    </div>
+        <div class="button-container">
+            <button class="sim" onclick="mostrarAlerta()">SIM</button>
+            <button class="nao">NÃO</button>
+        </div>
+
+    </main>
+
+    <script>
+        const naoButton = document.querySelector('.nao');
+
+        naoButton.addEventListener('mouseover', () => {
+            const random = Math.random();
+
+            if (random > 0.01) {
+                const randomX = Math.floor(Math.random() * 100);
+                const randomY = Math.floor(Math.random() * 100);
+
+                naoButton.style.left = `${randomX}%`;
+                naoButton.style.top = `${randomY}%`;
+            }
+        });
+
+        function mostrarAlerta() {
+            alert('PARABÉNS PELA ESCOLHA!!\nDIA 11/05/2024 ÁS 19:30\nNAO MARQUE NADA, VOCÊ TERÁ UM ENCONTRO COM 3 GATINHAS\nass: Josi, Kátia e Kênia');
+        }
+
+        </script>
+
+</body>
+</html>
